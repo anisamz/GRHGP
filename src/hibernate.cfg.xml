@@ -1,0 +1,39 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+        
+<hibernate-configuration>
+
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1/karwisoft</property>
+    <property name="hibernate.connection.username">root</property>
+    
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+
+
+
+    <mapping class="com.karwisoft.models.Admin"/>
+    <mapping class="com.karwisoft.models.Tache"/>  
+    <mapping class="com.karwisoft.models.Temps"/> 
+    <mapping class="com.karwisoft.models.Depense"/> 
+    <mapping class="com.karwisoft.models.Candidat"/>
+    <mapping class="com.karwisoft.models.Contrat"/>
+    <mapping class="com.karwisoft.models.Informations"/>
+    <mapping class="com.karwisoft.models.Employe"/>
+    <mapping class="com.karwisoft.models.Document"/>
+    <mapping class="com.karwisoft.models.Demande"/>
+    <mapping class="com.karwisoft.models.Offre"/>
+    <mapping class="com.karwisoft.models.Formation"/>
+    <mapping class="com.karwisoft.models.Formateur"/>
+    <mapping class="com.karwisoft.models.Projet"/>
+    <mapping class="com.karwisoft.models.Note"/>
+    <mapping class="com.karwisoft.models.Preselection"/>
+    <mapping class="com.karwisoft.models.SelFinal"/>
+<!-- 	<mapping class="com.karwisoft.models.Utilisateur_Roles"/>  -->
+
+  </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"htth://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+	<link type="text/css" rel="stylesheet" href="themes/sunny/skin.css" />
+	<title>Login</title>
+</h:head>
+<body style="background-color: Orange  ;">
+	<center> 
+		<table>
+			<tr>
+				<td ><img src="image\logo.jpg"></img></td>
+			</tr>
+		</table>
+		<div style="width: 700px ">
+		<h:form id="loginForm">
+		<br></br>
+		<br></br>
+		<br></br>
+		<table style="background-color: White ; border-radius: 30px ; border-bottom-width: 10px" >
+		<tr> <td> <div> <img src="image\pk.jpg"/></div></td>
+		<td>
+		
+<!--  			<p:fieldset styleClass="fieldset" legend="Authentication"  >   -->
+           
+           
+          
+				<p:focus />
+				<p:messages id="messages" globalOnly="true" />
+				
+				
+
+				<h:panelGrid id="logPanelGrid"
+					style="margin: 0 auto; margin-top: 60px; text-align: right ; "
+					cellspacing="8" columns="3" >
+					<h:panelGroup>
+						<h:outputText value="Login:" style="color: Black" />
+						<h:outputText style="color:red" value="*  " />
+					</h:panelGroup>
+					<p:inputText id="userName" value="#{loginBean.username}" required="true" 
+						label="User Name" title="Enterer votre login!" style="text-transform : capitalize;" />
+						
+					<h:panelGroup>
+						<p:message id="userNameMsg" value="Veuillez entrer votre nom d'utilisateur" for="userName"  />
+						<p:tooltip for="userName" styleClass="tooltip" showEvent="focus"
+							hideEvent="blur" value="Veuillez entrer votre nom d'utilisateur" />
+					</h:panelGroup>
+
+					<h:panelGroup>
+						<h:outputText value="Mot de passe:" />
+						<h:outputText style="color:red" value="*  " />
+					</h:panelGroup>
+					<p:password id="pass" value="#{loginBean.password}" required="true"
+						label="Password" title="SVP entrer votre mot de passe!"  />
+					<h:panelGroup>
+						<p:message id="passMsg" for="pass" />
+						<p:tooltip for="pass" styleClass="tooltip" showEvent="focus"
+							hideEvent="blur" />
+					</h:panelGroup>
+
+     
+             <div>
+             <br></br>
+           
+            <h:commandButton  style=" background-color: DarkOrange ;border-radius: 10px; width: 100px ; height: 30px ; border-color: SandyBrown" 
+            type="submit" icon="ui-icon-circle-check" value="Se connecter"
+			 action="#{loginBean.doLogin}"   />
+                
+
+            <h:commandButton  style=" background-color: DarkOrange ;border-radius: 10px; width: 100px ; height: 30px ; border-color: SandyBrown"
+			type="submit" icon="ui-icon-circle-check" value="Annuler" 
+             action="#{loginBean.doLogin}"   />
+             <br></br>
+           
+           </div>
+           
+           
+            <br></br>
+            <br></br>
+            
+          
+           
+			<h:commandLink style="color:DarkOrange ; font-size: 17px "	value=" Mot de passe oublié ?" action="#{navigationBean.redirectToInfo}" />
+			
+			
+			</h:panelGrid>
+<!-- 			</p:fieldset>  -->
+
+</td> </tr>
+</table>
+		</h:form>
+	<h:form>
+			
+			<br />
+		</h:form>
+		</div>
+	</center>
+</body>
+</html>

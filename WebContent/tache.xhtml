@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:c="http://java.sun.com/jsf/core" 
+      	  xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+      
+
+
+ <h:body>
+
+      <ui:composition template="/Template/basicTemplate.xhtml">
+      <ui:define name="content">
+
+                <!--  Tete Projets -->   
+      <div align="center" style=";color: #2E2E2E;font-size: 30px;line-height: 0.7;"> <b><i>Mes taches</i></b> </div>
+       <br></br><br></br>
+
+
+     <div>
+     <table align="center" width="100px" height= "30px" border="" bgcolor="" style="border-color:#FF8000; border-radius:50px" >
+        
+         <tr>
+         <td align="right">
+         <h:outputLink id="ajout" value="ajoutProjet.xhtml">
+         <h:graphicImage id="ajouE" url="icone\aj4.png" alt="ya rab" />
+         </h:outputLink>
+         </td>
+         <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+         <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+        
+         
+         <td align="right">   
+         <h:outputLink id="tel" value="ajoutTache.xhtml">
+         <h:graphicImage id="pdf" url="icone\aj3.png" alt="" />
+         </h:outputLink>
+         </td> 
+         
+         <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+         <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+         
+         
+        <td align="right">
+         <h:outputLink id="ajout" value="projet.xhtml">
+         <h:graphicImage id="ajouE" url="icone\projets.png" alt="ya rab" />
+         </h:outputLink>
+         </td>
+          
+         </tr>          
+        </table>        <br/>
+           
+           
+                      <!--liste de Projets -->  
+                      
+<p:dataTable value="#{etu.lstEtu}" var="e" paginator="false" rows="10" >
+
+<p:column sortBy="#{e.nom}" headerText="Tache" >
+<h:outputText value="#{e.nom}"/>
+</p:column>
+
+<p:column sortBy="#{e.classid}" headerText="Etat">
+<h:outputText value="#{e.classid}"/>
+</p:column>
+
+<p:column sortBy="#{e.nom}" headerText="Niveau" >
+<h:outputText value="#{e.nom}"/>
+</p:column>
+
+<p:column sortBy="#{e.classid}" headerText="Date Fin">
+<h:outputText value="#{e.classid}"/>
+</p:column>
+</p:dataTable>     
+
+
+
+</div>
+    
+           <br></br> <br></br>     
+
+             </ui:define>
+            </ui:composition>
+            </h:body>
+</html>

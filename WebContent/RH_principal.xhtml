@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:c="http://java.sun.com/jsf/core" 
+      	  xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+      
+
+
+<h:body>
+
+
+<ui:composition template="/Template/basicTemplate.xhtml">
+<ui:define name="content">
+
+<div align="center" style=";
+color: #2E2E2E;
+font-size: 30px;
+line-height: 0.7;"> Gestion des Ressources Humaines</div>
+<br></br>
+
+<div>
+
+<table align="center">
+<tr>
+                <td >
+                <h:outputLink id="employe" value="employe.xhtml">
+                <h:graphicImage id="emp" url="image\p.jpg" style="width: 200px ; height: 200px"/>
+                </h:outputLink></td>
+                
+<!--                 <img src="image\p.jpg" style="width: 200px ; height: 200px"></img> -->
+                
+                
+                <td >
+                <h:outputLink id="g_temps" value="gestion_temps.xhtml">
+                <h:graphicImage id="temps" url="image\a.jpg" style="width: 200px ; height: 200px"/>
+                </h:outputLink></td>
+<!--    <td ><img src="image\a.jpg" style="width: 200px ; height: 200px"></img></td> -->
+
+                 <td >
+                <h:outputLink id="demande" value="demande.xhtml">
+                <h:graphicImage id="dem" url="image\demande.jpg" style="width: 200px ; height: 200px"/>
+                </h:outputLink></td>
+                
+<!--       <td ><img src="image\demande.jpg" style="width: 200px ; height: 200px"></img></td> -->
+        
+         </tr>
+         <tr>
+         <td> <h:outputLink id="recrutement" value="recrutement.xhtml" >
+         <h:graphicImage id="rec" url="image\recrutement.jpg"  style="width: 200px ; height: 200px"/>
+         </h:outputLink></td>
+<!--             <td > <img src="image\recrutement.jpg" style="width: 200px ; height: 200px" alt="testoooooo"></img> </td> -->
+               
+               <td> <h:outputLink id="formation" value="formation.xhtml">
+         <h:graphicImage id="for" url="image\formation.jpg" style="width: 200px ; height: 200px"/>
+         </h:outputLink></td>
+               
+               
+<!--                <td ><img src="image\formation.jpg" style="width: 200px ; height: 200px"></img></td> -->
+                 
+                 
+                 
+                 <td> <h:outputLink id="paiement" value="paie.xhtml">
+         <h:graphicImage id="paie" url="image\paiement.jpg" alt="ya rab" style="width: 200px ; height: 200px"/>
+         </h:outputLink></td>
+                 
+<!--                   <td ><img src="image\paiement.jpg" style="width: 200px ; height: 200px"></img></td> -->
+         
+         
+         
+         </tr>
+         
+
+
+
+
+
+
+</table>
+
+
+
+</div>
+    
+    <br></br>
+    <br></br>     
+</ui:define>
+</ui:composition>
+
+</h:body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:c="http://java.sun.com/jsf/core" 
+      	  xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+      
+
+      <h:body>
+      <ui:composition template="/Template/basicTemplate.xhtml">
+      <ui:define name="content">
+
+      <div align="center" style=";color: #2E2E2E;font-size: 30px;
+      line-height: 0.7;border-color:#FF8000; border-radius:50px"> Employés</div>
+       <br></br>
+       <br></br>
+       
+
+     <div>
+          <table align="center" width="100px" height= "30px" border="" bgcolor="" 
+      style="border-color:#FF8000; border-radius:50px" >
+           
+           <tr>
+          
+           <td>
+           
+            <h:outputLink id="ajout" value="ajoutEmp.xhtml">
+         <h:graphicImage id="ajouE" url="icone\ajouter2.png" alt="ya rab" style="width: 30px ; height: 30px"/>
+         </h:outputLink>
+           
+           </td>
+         
+          <td>
+           
+            <h:outputLink id="tel" value="tele_pdf.xhtml">
+         <h:graphicImage id="pdf" url="icone\pdf.png" alt="" style="width: 30px ; height: 30px"/>
+         </h:outputLink>
+           
+           </td>  
+           
+           </tr>
+           
+           </table>
+           
+           <br />
+           
+           
+               <!--         liste d'Employés -->       
+
+      <table align="center" width="500px" height= "300px" border="1" bgcolor="" 
+      style="border-color:#FF8000; border-radius:10px" >
+
+         <tr align="center" >
+          <td align="center" style="width: 300px ; height: 20px" >  Employé 1  </td>
+          <td>
+          <p:growl id="messages"/> 
+<!--         <td> <h:outputLink id="inf_A" value="informations.xhtml"> -->
+         <h:graphicImage id="infA" url="Template\image_template\inf.ico"  style="width: 30px ; height: 30px" onclick="d.show();"   />
+<!--          </h:outputLink>  -->
+
+
+         <!--          Affichage d Informations -->
+              <p:dialog header="Informations" widgetVar="d" showEffect="explode" hideEffect="" height="450" width="450">
+             <img src="image\logo.jpg" alt="" />
+             <table align="right"><tr><td ><p:commandButton id="clearButton" type="button" value="Modifier"  
+        icon="ui-icon-pencil"  style="background-color: red;color:#2E2E2E;font-size: 12px; line-height: 0.7; align:right" 
+         onclick="d.show();"/></td></tr></table>
+          <br></br>
+          		   <br></br>
+          		
+          <h:panelGrid id="grid" columns="2" cellpadding="5" style="background-color:#F3E2A9 ;bordor-color:;
+          		border-radius:10px ;bordor:2;">
+         
+              <h:outputText value="Nom"/> 
+              <h:outputText  value="Islem"/> 
+              <h:outputText  value="Prénom"/> 
+              <h:outputText  value="Akid"/> 
+              <h:outputText  value="Id Karwisoft"/> 
+              <h:outputText  value="I.akid@gmail.com"/> 
+              <h:outputText  value="Tél"/> 
+              <h:outputText  value="22856925"/> 
+           
+              </h:panelGrid>
+             
+          <h:panelGrid columns="3" style="margin-top:10px">
+          		
+       <p:commandButton id="clearButton" type="button" value="Informations publiques"  
+        icon="ui-icon-pencil"  style="background-color: red;color:#2E2E2E;font-size: 12px; line-height: 0.7; align:right" 
+         onclick="dg.show();"/>
+         
+         
+         
+          <p:dialog header="Informations publiques" widgetVar="dg" showEffect="explode" hideEffect="" height="450" width="450">
+             
+          		
+          		<h:panelGrid id="grid" columns="2" cellpadding="5" style="background-color:#F3E2A9 ;bordor-color:;
+          		border-radius:10px ;bordor:2;">
+              
+          <h:outputText value="Nom"/> 
+          <h:outputText  value="Islem"/> 
+           <h:outputText  value="Prénom"/> 
+            <h:outputText  value="Akid"/> 
+             <h:outputText  value="Poste"/> 
+              <h:outputText  value="I.akid@gmail.com"/> 
+              <h:outputText  value="adresse"/> 
+              <h:outputText  value="22856925"/> 
+                <h:outputText  value="code postale"/> 
+              <h:outputText  value="22856925"/> 
+               <h:outputText  value="Tél"/> 
+              <h:outputText  value="22856925"/> 
+               <h:outputText  value="@ Mail"/> 
+              <h:outputText  value="22856925"/> 
+                <h:outputText  value="Date Entrée"/> 
+              <h:outputText  value="22856925"/> 
+              
+           
+                
+                </h:panelGrid>
+             
+             
+             
+          <h:panelGrid columns="3" style="margin-top:10px">
+          
+           <p:commandButton id="clearButton" type="button" value="Informations RH"  
+        icon="ui-icon-pencil"  style="background-color: red;color:#2E2E2E;font-size: 12px; line-height: 0.7; align:right" 
+         onclick="d2.show();"/>
+         
+         <p:commandButton id="clearButton" type="button" value="Quitter"  
+        icon="ui-icon-pencil"  style="background-color: red;color:#2E2E2E;font-size: 12px; line-height: 0.7; align:right" 
+         onclick="d.hide();dg.hide();d2.hide();"/>
+          </h:panelGrid>
+          </p:dialog>
+          
+          
+         <p:commandButton id="clearButton" type="button" value="Informations RH"  
+        icon="ui-icon-pencil"  style="background-color: red;color:#2E2E2E;font-size: 12px; line-height: 0.7; align:right" 
+         onclick="d2.show();"/>
+         
+          
+          <p:dialog header="Informations RH" widgetVar="d2" showEffect="explode" hideEffect="" height="450" width="450">
+             
+          		
+          		<h:panelGrid id="grid" columns="2" cellpadding="5" style="background-color:#F3E2A9 ;bordor-color:;
+          		border-radius:10px ;bordor:2;">
+              
+          <h:outputText value="CIN"/> 
+          <h:outputText  value="00000"/> 
+           <h:outputText  value="CNSS"/> 
+            <h:outputText  value="0000"/> 
+             <h:outputText  value="Salaire"/> 
+              <h:outputText  value="5000"/> 
+              
+           
+                </h:panelGrid>
+             
+             
+          <h:panelGrid columns="3" style="margin-top:10px">
+          
+           <p:commandButton id="clearButton" type="button" value="Informations publiques"  
+        icon="ui-icon-pencil"  style="background-color: red;color:#2E2E2E;font-size: 12px; line-height: 0.7; align:right" 
+         onclick="dg.show();"/>
+         
+         <p:commandButton id="clearButton" type="button" value="Quitter"  
+        icon="ui-icon-pencil"  style="background-color: red;color:#2E2E2E;font-size: 12px; line-height: 0.7; align:right" 
+         onclick="d.hide();dg.hide();d2.hide();"/>
+          </h:panelGrid>
+          </p:dialog>
+         
+         <p:commandButton id="clearButton" type="button" value="Quitter"  
+        icon="ui-icon-pencil"  style="background-color: red;color:#2E2E2E;font-size: 12px; line-height: 0.7; align:right" 
+         onclick="d.hide();dg.hide();d2.hide();"/>
+      
+      
+            </h:panelGrid>
+            </p:dialog>
+         
+         
+         </td>
+         
+         
+         
+         
+        <!--    <td>
+         
+         
+          <p:dialog header="Notes" widgetVar="d" showEffect="explode" hideEffect="bounce" height="450" width="450">
+          		<p:editor id="editor" escape = "false" value="#{forumBean.message}"  width="400" height="400"/> 
+          		<h:panelGrid columns="2" style="margin-top:10px">
+        	<p:commandButton id="submitButton" value="Enregistrer" onclick="d.hide();" action="#{forumBean.saveMessage}" update="messages" icon="ui-icon-disk" 
+        	 style="background-color: #FE9A2E;color:#2E2E2E;font-size: 15px; line-height: 0.7;"  />
+      
+      
+        <p:commandButton id="clearButton" type="button" value="Clear"  icon="ui-icon-close" 
+        style="background-color: #FE9A2E;color:#2E2E2E;font-size: 15px; line-height: 0.7;" />
+    </h:panelGrid>
+            </p:dialog>
+            
+            </td> -->
+         
+         
+         
+         
+          <td> <h:outputLink id="inf_M" value="informations.xhtml">
+         <h:graphicImage id="infM" url="icone\modfi.png" alt="ya rab" style="width: 30px ; height: 30px"/>
+         </h:outputLink></td>
+           <td> <h:outputLink id="sup" value="employe.xhtml">
+         <h:graphicImage id="supE" url="icone\supp.png" alt="ya rab" style="width: 30px ; height: 30px"/>
+         </h:outputLink></td> 
+         
+         
+          
+
+         </tr>
+         
+
+
+ <tr align="center" >
+         <td align="center" style="width: 100px ; height: 30px" >  Employé 2  </td>
+         <td> <h:outputLink id="paiement" value="paie.xhtml">
+         <h:graphicImage id="paie" url="Template\image_template\inf.ico" alt="ya rab" style="width: 30px ; height: 30px"/>
+         </h:outputLink></td>
+         
+          <td> <h:outputLink id="paiement" value="paie.xhtml">
+         <h:graphicImage id="paie" url="icone\modfi.png" alt="ya rab" style="width: 30px ; height: 30px"/>
+         </h:outputLink></td>
+           <td> <h:outputLink id="paiement" value="paie.xhtml">
+         <h:graphicImage id="paie" url="icone\supp.png" alt="ya rab" style="width: 30px ; height: 30px"/>
+         </h:outputLink></td>  
+
+         </tr>
+          <tr align="center" >
+         <td align="center" style="width: 100px ; height: 30px" >  Employé 1  </td>
+         <td> <h:outputLink id="paiement" value="paie.xhtml">
+         <h:graphicImage id="paie" url="Template\image_template\inf.ico" alt="ya rab" style="width: 30px ; height: 30px"/>
+         </h:outputLink></td>
+         
+          <td> <h:outputLink id="paiement" value="paie.xhtml">
+         <h:graphicImage id="paie" url="icone\modfi.png" alt="ya rab" style="width: 30px ; height: 30px"/>
+         </h:outputLink></td>
+           <td> <h:outputLink id="paiement" value="paie.xhtml">
+         <h:graphicImage id="paie" url="icone\supp.png" alt="ya rab" style="width: 30px ; height: 30px"/>
+         </h:outputLink></td>  
+
+         </tr>
+          <tr align="center" >
+         <td align="center" style="width: 100px ; height: 30px" >  Employé 1  </td>
+         <td> <h:outputLink id="paiement" value="paie.xhtml">
+         <h:graphicImage id="paie" url="Template\image_template\inf.ico" alt="ya rab" style="width: 30px ; height: 30px"/>
+         </h:outputLink></td>
+         
+          <td> <h:outputLink id="paiement" value="paie.xhtml">
+         <h:graphicImage id="paie" url="icone\modfi.png" alt="ya rab" style="width: 30px ; height: 30px"/>
+         </h:outputLink></td>
+           <td> <h:outputLink id="sup" value="employe.xhtml">
+         <h:graphicImage id="supE" url="icone\supp.png" alt="ya rab" style="width: 30px ; height: 30px"/>
+         </h:outputLink></td>  
+
+         </tr>
+        
+        </table>
+
+       </div>
+    
+           <br></br> <br></br>     
+
+             </ui:define>
+            </ui:composition>
+            </h:body>
+</html>

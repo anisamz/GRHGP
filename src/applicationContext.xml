@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+	
+	<!-- Admin -->
+<bean id="AdminService" class="com.karwisoft.services.AdminService">
+		<property name="AdminDAO">
+			<ref bean="AdminDAO" />
+		</property>
+	</bean>
+	
+	<bean id="AdminDAO" class="com.karwisoft.implementation.AdminImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+<!-- Tache -->
+
+<bean id="TacheService" class="com.karwisoft.services.TacheService">
+		<property name="TacheDAO">
+			<ref bean="TacheDAO" />
+		</property>
+	</bean>
+	
+	<bean id="TacheDAO" class="com.karwisoft.implementation.TacheImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+     <!-- Tache -->
+<bean id="TempsService" class="com.karwisoft.services.TempsService">
+		<property name="TempsDAO">
+			<ref bean="TempsDAO" />
+		</property>
+	</bean>
+	
+	<bean id="TempsDAO" class="com.karwisoft.implementation.TempsImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	
+	
+	 <!-- Depense -->
+<bean id="DepenseService" class="com.karwisoft.services.DepenseService">
+		<property name="DepenseDAO">
+			<ref bean="DepenseDAO" />
+		</property>
+	</bean>
+	
+	<bean id="DepenseDAO" class="com.karwisoft.implementation.DepenseImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<!-- Candidat -->
+<bean id="CandidatService" class="com.karwisoft.services.CandidatService">
+		<property name="CandidatDAO">
+			<ref bean="CandidatDAO" />
+		</property>
+	</bean>
+	
+	<bean id="CandidatDAO" class="com.karwisoft.implementation.CandidatImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	
+		<!-- Contrat -->
+<bean id="ContratService" class="com.karwisoft.services.ContratService">
+		<property name="ContratDAO">
+			<ref bean="ContratDAO" />
+		</property>
+	</bean>
+	
+	<bean id="ContratDAO" class="com.karwisoft.implementation.ContratImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<!-- Informations -->
+<bean id="InformationsService" class="com.karwisoft.services.InformationsService">
+		<property name="InformationsDAO">
+			<ref bean="InformationsDAO" />
+		</property>
+	</bean>
+	
+	<bean id="InformationsDAO" class="com.karwisoft.implementation.InformationsImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<!-- Employes -->
+<bean id="EmployesService" class="com.karwisoft.services.EmployesService">
+		<property name="EmployesDAO">
+			<ref bean="EmployesDAO" />
+		</property>
+	</bean>
+	
+	<bean id="EmployesDAO" class="com.karwisoft.implementation.EmployesImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	
+	
+		<!-- Document -->
+<bean id="DocumentService" class="com.karwisoft.services.DocumentService">
+		<property name="DocumentDAO">
+			<ref bean="DocumentDAO" />
+		</property>
+	</bean>
+	
+	<bean id="DocumentDAO" class="com.karwisoft.implementation.DocumentImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<!-- Demande -->
+<bean id="DemandeService" class="com.karwisoft.services.DemandeService">
+		<property name="DemandeDAO">
+			<ref bean="DemandeDAO" />
+		</property>
+	</bean>
+	
+	<bean id="DemandeDAO" class="com.karwisoft.implementation.DemandeImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<!-- Offre -->
+<bean id="OffreService" class="com.karwisoft.services.OffreService">
+		<property name="OffreDAO">
+			<ref bean="OffreDAO" />
+		</property>
+	</bean>
+	
+	<bean id="OffreDAO" class="com.karwisoft.implementation.OffreImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+		<!-- Formateur -->
+<bean id="FormateurService" class="com.karwisoft.services.FormateurService">
+		<property name="FormateurDAO">
+			<ref bean="FormateurDAO" />
+		</property>
+	</bean>
+	
+	<bean id="FormateurDAO" class="com.karwisoft.implementation.FormateurImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+		<!-- Formation -->
+<bean id="FormationService" class="com.karwisoft.services.FormationService">
+		<property name="FormationDAO">
+			<ref bean="FormationDAO" />
+		</property>
+	</bean>
+	
+	<bean id="FormationDAO" class="com.karwisoft.implementation.FormationImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<!-- Projet -->
+<bean id="ProjetService" class="com.karwisoft.services.ProjetService">
+		<property name="ProjetDAO">
+			<ref bean="ProjetDAO" />
+		</property>
+	</bean>
+	
+	<bean id="ProjetDAO" class="com.karwisoft.implementation.ProjetImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+		<!-- Note -->
+<bean id="NoteService" class="com.karwisoft.services.NoteService">
+		<property name="NoteDAO">
+			<ref bean="NoteDAO" />
+		</property>
+	</bean>
+	
+	<bean id="NoteDAO" class="com.karwisoft.implementation.NoteImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	
+			<!-- Preselection -->
+<bean id="PreselectionService" class="com.karwisoft.services.PreselectionService">
+		<property name="PreselectionDAO">
+			<ref bean="PreselectionDAO" />
+		</property>
+	</bean>
+	
+	<bean id="PreselectionDAO" class="com.karwisoft.implementation.PreselectionImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	
+	<!-- SelFinal -->
+<bean id="SelFinalService" class="com.karwisoft.services.SelFinalService">
+		<property name="SelFinalDAO">
+			<ref bean="SelFinalDAO" />
+		</property>
+	</bean>
+	
+	<bean id="SelFinalDAO" class="com.karwisoft.implementation.SelFinalImp">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
+	</bean>
+
+
+
+
+</beans>
