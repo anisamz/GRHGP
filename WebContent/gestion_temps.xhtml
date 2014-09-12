@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:c="http://java.sun.com/jsf/core" 
+      	  xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+      
+
+
+      <h:body>
+
+
+      <ui:composition template="/Template/basicTemplate.xhtml">
+      <ui:define name="content">
+
+      <div align="center" style=";
+      color: #2E2E2E;
+      font-size: 30px;
+      line-height: 0.7;"> Gestion de temps</div>
+       <br></br>
+
+     <div>
+
+
+<!--       <table align="center" width="100%" height= "80%" border="2" bgcolor="#A4A4A4"  -->
+<!--       style="border-color:#FF8000; border-radius:50px" > -->
+
+
+
+       <h:form prependId="false">
+
+    <p:dataTable var="recl" value="#{reclamationBean.listReclamation}" paginator="true">
+      
+      
+        <p:column headerText="Message">
+            <h:outputText value="aloooo" />
+        </p:column>
+        
+         <p:column headerText="Traitement">
+            <h:outputText value="test" />
+        </p:column>
+       
+         <p:column style="width:32px">  
+            <p:commandButton update="display" oncomplete="carDialog.show()"  
+                    image="ui-icon ui-icon-search">  
+                <c:setPropertyActionListener value="#{recl}"  
+                    target="#{reclamationBean.selectedReclamation}" />  
+            </p:commandButton>  
+            <p:dialog header="Car Detail" widgetVar="carDialog" resizable="false"  
+              height="650" width="750" showEffect="explode" hideEffect="explode">  
+  
+        <h:panelGrid id="display" columns="10" cellpadding="4" >  
+  
+         
+  
+            <h:outputText value="Reponse:" />  
+            <p:inputTextarea rows="10" cols="30"  maxlength="100" value="#{reclamationBean.reponse}" autoResize="false"/>
+            <p:growl id="messages"/> 
+            <p:commandButton id="submitButton" value="Enregistrer"  action="#{reclamationBean.saveReponse}" update="messages"  icon="ui-icon-disk" />
+            
+
+        </h:panelGrid>  
+    </p:dialog>  
+        </p:column> 
+         
+
+      
+
+      
+    </p:dataTable>
+   </h:form>
+
+<!--        </table> -->
+
+
+
+       </div>
+    
+    <br></br>
+    <br></br>     
+
+
+              </ui:define>
+
+             </ui:composition>
+
+            </h:body>
+</html>

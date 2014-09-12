@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"htth://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html class="paceCounter paceSocial app"
+      xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:p="http://primefaces.org/ui">
+	  
+	  <h:head>
+	<title>karwisoft</title>
+	
+	
+	<meta charset="utf-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"></meta>
+	
+	
+		<link type="text/css" rel="stylesheet" href="assets/css/admin/module.admin.stylesheet-complete.min.css" />
+	
+	<script type="text/javascript" src="assets/library/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="assets/library/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="assets/library/modernizr/modernizr.js"></script>
+<script type="text/javascript"  src="assets/plugins/core_less-js/less.min.js"></script>
+<script type="text/javascript" src="assets/plugins/charts_flot/excanvas.js"></script>
+<script type="text/javascript" src="assets/plugins/core_browser/ie/ie.prototype.polyfill.js"></script>	
+	
+
+	
+</h:head>
+<body class="">
+	
+	
+	<div class="container-fluid menu-hidden ">
+		
+		<div id="content">
+						
+			<div class="layout-app col-fs">
+	<div class="row row-app">
+		<div class="col-md-12">
+			<div class="col-separator col-separator-first box col-unscrollable col-fs">
+				<div class="col-table">
+					<div class="col-table-row">
+						<div class="col-app col-unscrollable tab-content">
+							<div class="col-app lock-wrapper lock-bg-1 tab-pane active animated fadeIn" id="lock-1-1">
+								<h2 class="text-white innerB text-center">Accédez à votre "Tableau de Bord"</h2>
+								<h4 class="text-white innerB text-center" > Karwisoft </h4>
+								<div class="lock-container">
+									<div class="innerAll text-center">
+										<img src="assets/images/acteur/acteur_100.jpg" class="img-circle"/>
+										<h:form id="loginForm">
+										<div class="innerLR">
+										
+										
+											<h:inputText class="form-control text-center bg-gray" type="text"  id="userName" value="#{loginBean.username}"/>
+											
+											<p:password styleClass="form-control text-center bg-gray" type="password"  id="pass" value="#{loginBean.password}"/>
+										
+										</div>
+										<div class="innerT">
+										<h:commandButton type="submit" action="#{loginBean.doLogin}"  styleClass="btn btn-primary" value="S'identifier" />
+										
+											<!-- <a href="index.html" class="btn btn-primary">S'identifier <i class="fa fa-fw fa-unlock-alt"></i></a>-->
+										
+										</div>
+										</h:form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+</div>
+</div></div>
+	
+<script type="text/javascript">
+<![CDATA[
+// content of your Javascript goes here
+]]>
+</script>
+
+	
+	<script type="text/javascript" data-id="App.Config">
+	<![CDATA[
+	var App = {};	var basePath = '',
+		commonPath = 'assets/',
+		rootPath = '/',
+		DEV = false,
+		componentsPath = 'assets/components/';
+	
+	var primaryColor = '#ff9000',
+		dangerColor = '#b55151',
+		successColor = '#609450',
+		infoColor = '#4a8bc2',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	]]>
+		</script>
+			<script type="text/javascript" src="assets/library/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/plugins/core_nicescroll/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="assets/plugins/core_breakpoints/breakpoints.js"></script>
+<script type="text/javascript" src="assets/plugins/core_preload/pace.min.js"></script>
+<script type="text/javascript" src="assets/components/core_preload/preload.pace.init.js"></script>
+<script type="text/javascript" src="assets/plugins/menu_sidr/jquery.sidr.js"></script>
+<script type="text/javascript" src="assets/components/menus/menus.sidebar.chat.init.js"></script>
+<script type="text/javascript" src="assets/plugins/other_mixitup/jquery.mixitup.min.js"></script>
+<script type="text/javascript" src="assets/plugins/other_mixitup/mixitup.init.js"></script>
+<script type="text/javascript" src="assets/components/core/core.init.js"></script>
+	
+		
+</body>
+</html>

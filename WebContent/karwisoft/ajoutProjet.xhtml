@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:c="http://java.sun.com/jsf/core" 
+      	  xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+         
+      <h:body>
+      <ui:composition template="/Template/basicTemplate.xhtml">
+      <ui:define name="content">
+
+      <div align="center" style=";color: #2E2E2E;font-size: 30px;line-height: 0.7;"> <b><i>Nouveau Projet</i></b> </div>
+       <br></br><br></br><br></br>
+
+           
+
+     <div  align="center" style="border-color:#FF8000;" >
+     
+      
+     <table align="right" border="" bgcolor="" style="border-color:#FF8000; border-radius:50px" >
+        
+         <tr>
+          <td ></td><td ></td><td ></td><td ></td><td ></td><td ></td><td ></td><td >
+         </td><td ></td><td ></td><td ></td><td ></td><td ></td>
+         <td >
+         <h:outputLink id="tel" value="ajoutTache.xhtml">
+         <h:graphicImage id="pdf" url="icone\aj3.png" alt="" />
+         </h:outputLink>
+         </td>
+         <td ></td><td ></td><td ></td><td ></td><td ></td><td ></td><td ></td><td ></td>
+         <td>
+         <h:outputLink id="ajout" value="projet.xhtml">
+         <h:graphicImage id="ajouE" url="icone\projets.png" alt="ya rab" />
+         </h:outputLink>
+         </td>
+         <td ></td><td ></td><td ></td><td ></td><td ></td><td ></td><td ></td><td >
+         </td><td ></td><td ></td><td ></td><td ></td><td ></td>
+         </tr>
+         </table>
+         <br/> <br/>
+     <table align="center"  width="500px" height= "300px" border="" bgcolor="" 
+      style="border-color:#FF8000; border-radius:10px;color:#FF8000 ">
+     <tr>
+     <td> <b><i>Nom projet </i></b> </td>
+     <td><h:inputText id="nom" value="#{etu.etudiant.nom}" required="true" requiredMessage="Mondatory field!"/>
+<h:message for="nom" style="color:red"/> </td>
+</tr>
+
+<tr>
+<td><b><i>Responsable  </i></b></td>
+<td><h:selectOneMenu value="#{etu.etudiant.classid}">
+<c:selectItems value="#{etu.lstGroupe}" var="g" itemLabel="#{g.nom}" itemValue="#{g.id}"/>
+</h:selectOneMenu> </td>
+</tr>
+<tr>
+<td><b><i>Equipe </i></b></td>
+<td> <h:selectOneMenu value="#{etu.etudiant.classid}">
+<c:selectItems value="#{etu.lstGroupe}" var="g" itemLabel="#{g.nom}" itemValue="#{g.id}"/>
+</h:selectOneMenu> </td> </tr>
+
+
+<tr>
+ <td><b><i>Date Debut </i></b></td>
+ <td><p:calendar value="#{etu.etudiant.db}" id="popupButtonCal" showOn="button" required="true" requiredMessage="Vs devez saisir une date!!"></p:calendar>
+<h:message for="popupButtonCal" style="color:red"/>
+</td>
+</tr>
+
+
+<tr>
+ <td><b><i>Date Fin </i></b></td>
+<td> <p:calendar value="#{etu.etudiant.df}" id="popupButtonCal1" showOn="button" required="true" requiredMessage="Vs devez saisir une date!!"></p:calendar>
+<h:message for="popupButtonCal" style="color:red"/>
+</td>
+</tr>
+<tr>
+ <td align="left" style="width: 30px ; height: 30px;color:#FF8000 "> <b><i>Note</i></b> </td>
+         
+ <td><h:inputTextarea id="textArea" style="background-color:;border-color:#FF8000; border-radius:10px" rows="4" cols="70"  value="Text goes here.."/></td>
+   </tr> 
+   
+    <tr> 
+       <td align="right">
+         <h:outputLink id="ajout" value="ajoutTache.xhtml">
+         <h:graphicImage id="ajouE" url="icone\doc.ico" alt="ya rab" style="width: 30px ; height: 30px" onclick="d.show();"/>
+           </h:outputLink> </td>
+          
+          		
+        <td>	<p:fileUpload value="#{fileUploadController.file}" mode="simple" />
+        	
+       
+         </td> 
+        </tr>      
+<tr>
+<td> </td>
+<td align="right">
+<h:commandButton action="#{etu.etudiant.save()}" value="Enregistrer" style="border-color:#FF8000; border-radius:10px;color:#FF8000; width:100px; height:30px" />
+<br></br>
+
+</td>
+</tr>
+</table>
+
+       </div>
+    
+           <br></br> <br></br>     
+
+             </ui:define>
+            </ui:composition>
+            </h:body>
+</html>

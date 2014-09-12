@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:c="http://java.sun.com/jsf/core" 
+      	  xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+      
+
+
+      <h:body>
+
+
+      <ui:composition template="/Template/basicTemplate.xhtml">
+      <ui:define name="content">
+
+      <div align="center" style=";
+      color: #2E2E2E;
+      font-size: 30px;
+      line-height: 0.7;"> Notes</div>
+       <br></br>
+
+     <div>
+
+       <table align="center"> 
+
+       <tr>
+
+
+       
+        
+        
+           <td> 
+                <p:growl id="messages"/> 
+                
+        <p:commandButton id="clearButton" type="button" value="Ajouter"  
+        icon="ui-icon-plusthick"  style="background-color: red;color:#2E2E2E;font-size: 12px; line-height: 0.7;"  onclick="d.show();"/>
+       
+         
+               <p:dialog header="Notes" widgetVar="d" showEffect="explode" hideEffect="bounce" height="450" width="450">
+          		<p:editor id="editor" escape = "false" value="#{forumBean.message}"  width="400" height="400"/> 
+          		<h:panelGrid columns="2" style="margin-top:10px">
+        	<p:commandButton id="submitButton" value="Enregistrer" onclick="d.hide();" action="#{forumBean.saveMessage}" update="messages" icon="ui-icon-disk" 
+        	 style="background-color: #FE9A2E;color:#2E2E2E;font-size: 15px; line-height: 0.7;"  />
+      
+      
+        <p:commandButton id="clearButton" type="button" value="Clear"  icon="ui-icon-close" 
+        style="background-color: #FE9A2E;color:#2E2E2E;font-size: 15px; line-height: 0.7;" />
+    </h:panelGrid>
+            </p:dialog>
+                </td>
+                
+         <td><p:commandButton id="clearButton" type="button" value="Supprimer tous"  icon="ui-icon-trash
+ " 
+        style="background-color: red;color:#2E2E2E;font-size: 12px; line-height: 0.7;"  onclik="d.close()"/>
+             </td>
+
+
+         </tr>
+
+
+         </table>
+
+  	   <table align="center" width="700px" height= "400px" border="" bgcolor="" 
+      style="border-color:#FF8000; border-radius:50px" >
+
+
+         <tr align="center" >
+         <td align="left" style="width: 30px ; height: 30px;color:#FF8000 "> <b><i>Date1</i></b>
+          <img src="icone\mod.png" alt="Note" width="20px" height="20px" /> <br></br>
+          <h:inputTextarea id="textArea" style="background-color:;border-color:#FF8000; border-radius:10px" rows="4" cols="70"  value="Text goes here.."/></td>
+         
+          <td> <h:outputLink id="paiement" value="paie.xhtml">
+         <h:graphicImage id="paie" url="icone\modfi.png" alt="ya rab" style="width: 30px ; height: 30px"/>
+         </h:outputLink></td>
+           <td> <h:outputLink id="paiement" value="paie.xhtml">
+         <h:graphicImage id="paie" url="icone\supp.png" alt="ya rab" style="width: 30px ; height: 30px"/>
+         </h:outputLink></td>  
+
+         </tr>
+         
+
+ <tr align="center" >
+         <td align="left" style="width: 30px ; height: 30px;color:#FF8000 "> <b><i>Date1</i></b>  <br></br>
+          <h:inputTextarea id="textArea" style="background-color:#FE9A2E" rows="4" cols="70"  value="Text goes here.."/></td>
+         
+          <td> <h:outputLink id="paiement" value="paie.xhtml">
+         <h:graphicImage id="paie" url="icone\modfi.png" alt="ya rab" style="width: 30px ; height: 30px"/>
+         </h:outputLink></td>
+           <td> <h:outputLink id="paiement" value="paie.xhtml">
+         <h:graphicImage id="paie" url="icone\supp.png" alt="ya rab" style="width: 30px ; height: 30px"/>
+         </h:outputLink></td>  
+
+         </tr>
+          <tr align="center" >
+         <td align="left" style="width: 30px ; height: 30px;color:#FF8000 " > <b><i> Date1</i></b>  <br></br>
+          <h:inputTextarea id="textArea" style="background-color:#FE9A2E" rows="4" cols="70"  value="Text goes here.."/></td>
+         
+          <td> <h:outputLink id="paiement" value="paie.xhtml">
+         <h:graphicImage id="paie" url="icone\modfi.png" alt="ya rab" style="width: 30px ; height: 30px"/>
+         </h:outputLink></td>
+           <td> <h:outputLink id="paiement" value="paie.xhtml">
+         <h:graphicImage id="paie" url="icone\supp.png" alt="ya rab" style="width: 30px ; height: 30px"/>
+         </h:outputLink></td>  
+
+         </tr>
+
+        </table>
+
+        
+     
+        
+       
+
+
+<br /><br /><br />
+  
+  	
+    
+
+       </div>
+    
+       
+
+
+              </ui:define>
+
+             </ui:composition>
+
+            </h:body>
+</html>

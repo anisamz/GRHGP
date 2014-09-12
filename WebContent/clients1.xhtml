@@ -1,0 +1,72 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/sunny/skin.css" />
+	<!--  <link type="text/css" rel="stylesheet" href="ui-lightness/skin.css" /> -->
+	<link rel='stylesheet' type='text/css' href='style.css' />
+	<!-- 	<script
+		src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script> -->
+	<script type='text/javascript' src='menu.js'></script>
+	<script type='text/javascript' src='locales.js'></script>
+	<meta charset="utf-8" />
+	<title>Accueil</title>
+	</h:head>
+	<body>
+		<h:form id="form">
+
+			<p:dataTable id="clients" var="client"
+				value="#{tb.listeclients}"
+				rowKey="#{client.nomPrenom_Client}"
+				selection="#{tb.selectedClients}" selectionMode="single">
+
+				<f:facet name="header">
+           Liste des clients
+        </f:facet>
+
+				<p:column headerText="Nom et Prenom">
+            #{client.nomPrenom_Client}
+        </p:column>
+
+				<p:column headerText="Year">
+            #{client.adresse_Client}
+        </p:column>
+
+				<p:column headerText="Manufacturer">
+            #{client.tel_Client}
+        </p:column>
+
+				<p:column headerText="Color">
+            #{client.email_Client}
+        </p:column>
+				<p:column headerText="Color">
+            #{client.gsm_Client}
+        </p:column>
+				<f:facet name="footer">
+					<p:commandButton value="View" icon="ui-icon-search"
+						update=":form:display" oncomplete="PF('carDialog').show()" />
+				
+				<p:commandButton value="Delete" icon="ui-icon-trash" actionListener="#{tb.delete(client) }" 
+						update=":form:display" oncomplete="PF('carDialog').show()" />
+						</f:facet>
+			</p:dataTable>
+
+			<p:dialog header="Client Detail" widgetVar="carDialog" width="250"
+				showEffect="explode" hideEffect="explode">
+
+				<p:dataList id="display" value="#{tb.selectedClients}"
+					var="selectedClient" type="definition">
+ 
+        <!--     NomPrenom: #{selectedClient.nomPrenom_Client}, Adresse: #{selectedClient.nomPrenom_Client} -->
+      
+				</p:dataList>
+
+			</p:dialog>
+
+		</h:form>
+	</body>
+</html>

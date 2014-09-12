@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:c="http://java.sun.com/jsf/core" 
+      	  xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+      
+
+
+      <h:body>
+
+
+      <ui:composition template="/Template/basicTemplate.xhtml">
+      <ui:define name="content">
+
+      <div align="center" style=";
+      color: #2E2E2E;
+      font-size: 30px;
+      line-height: 0.7;"> Demandes </div>
+       <br></br>
+
+     <div>
+
+
+      <table align="center" width="500px" height= "300px" border="1" bgcolor="" 
+      style="border-color:#FF8000; border-radius:10px" >
+
+         <tr align="center" >
+          <td align="center" style="width: 300px ; height: 20px" >  Employé 1  </td>
+          <td>
+          <p:growl id="messages"/> 
+        <h:outputLink id="inf_A" value="informations.xhtml" onclick="d.show();"> </h:outputLink> </td>
+       <td>  <h:graphicImage id="infA" url="Template\image_template\inf.ico"  style="width: 30px ; height: 30px" onclick="d.show();"   />
+<!--          </h:outputLink>  -->
+
+
+         <!--          Affichage d Informations -->
+              <p:dialog header="Informations" widgetVar="d" showEffect="explode" hideEffect="" height="450" width="450">
+             <img src="logo.jpg" alt="" />
+             <table align="right"><tr><td ><p:commandButton id="clearButton" type="button" value="Modifier"  
+        icon="ui-icon-pencil"  style="background-color: red;color:#2E2E2E;font-size: 12px; line-height: 0.7; align:right" 
+         onclick="d.show();"/></td></tr></table>
+          <br></br>
+          		   <br></br>
+          		
+          <h:panelGrid id="grid" columns="2" cellpadding="5" style="background-color:#F3E2A9 ;bordor-color:;
+          		border-radius:10px ;bordor:2;">
+         
+              <h:outputText value="Nom"/> 
+              <h:outputText  value="Islem"/> 
+              <h:outputText  value="Prénom"/> 
+              <h:outputText  value="Akid"/> 
+              <h:outputText  value="Id Karwisoft"/> 
+              <h:outputText  value="I.akid@gmail.com"/> 
+              <h:outputText  value="Tél"/> 
+              <h:outputText  value="22856925"/> 
+           
+              </h:panelGrid>
+             
+          <h:panelGrid columns="3" style="margin-top:10px">
+          		
+       <p:commandButton id="clearButton" type="button" value="Informations publiques"  
+        icon="ui-icon-pencil"  style="background-color: red;color:#2E2E2E;font-size: 12px; line-height: 0.7; align:right" 
+         onclick="dg.show();"/>
+         
+         
+         
+          <p:dialog header="Informations publiques" widgetVar="dg" showEffect="explode" hideEffect="" height="450" width="450">
+             
+          		
+          		<h:panelGrid id="grid" columns="2" cellpadding="5" style="background-color:#F3E2A9 ;bordor-color:;
+          		border-radius:10px ;bordor:2;">
+              
+          <h:outputText value="Nom"/> 
+          <h:outputText  value="Islem"/> 
+           <h:outputText  value="Prénom"/> 
+            <h:outputText  value="Akid"/> 
+             <h:outputText  value="Poste"/> 
+              <h:outputText  value="I.akid@gmail.com"/> 
+              <h:outputText  value="adresse"/> 
+              <h:outputText  value="22856925"/> 
+                <h:outputText  value="code postale"/> 
+              <h:outputText  value="22856925"/> 
+               <h:outputText  value="Tél"/> 
+              <h:outputText  value="22856925"/> 
+               <h:outputText  value="@ Mail"/> 
+              <h:outputText  value="22856925"/> 
+                <h:outputText  value="Date Entrée"/> 
+              <h:outputText  value="22856925"/> 
+              
+           
+                
+                </h:panelGrid>
+             
+             
+             
+          <h:panelGrid columns="3" style="margin-top:10px">
+          
+           <p:commandButton id="clearButton" type="button" value="Informations RH"  
+        icon="ui-icon-pencil"  style="background-color: red;color:#2E2E2E;font-size: 12px; line-height: 0.7; align:right" 
+         onclick="d2.show();"/>
+         
+         <p:commandButton id="clearButton" type="button" value="Quitter"  
+        icon="ui-icon-pencil"  style="background-color: red;color:#2E2E2E;font-size: 12px; line-height: 0.7; align:right" 
+         onclick="d.hide();dg.hide();d2.hide();"/>
+          </h:panelGrid>
+          </p:dialog>
+          
+          
+         <p:commandButton id="clearButton" type="button" value="Informations RH"  
+        icon="ui-icon-pencil"  style="background-color: red;color:#2E2E2E;font-size: 12px; line-height: 0.7; align:right" 
+         onclick="d2.show();"/>
+         
+          
+          <p:dialog header="Informations RH" widgetVar="d2" showEffect="explode" hideEffect="" height="450" width="450">
+             
+          		
+          		<h:panelGrid id="grid" columns="2" cellpadding="5" style="background-color:#F3E2A9 ;bordor-color:;
+          		border-radius:10px ;bordor:2;">
+              
+          <h:outputText value="CIN"/> 
+          <h:outputText  value="00000"/> 
+           <h:outputText  value="CNSS"/> 
+            <h:outputText  value="0000"/> 
+             <h:outputText  value="Salaire"/> 
+              <h:outputText  value="5000"/> 
+              
+           
+                </h:panelGrid>
+             
+             
+          <h:panelGrid columns="3" style="margin-top:10px">
+          
+           <p:commandButton id="clearButton" type="button" value="Informations publiques"  
+        icon="ui-icon-pencil"  style="background-color: red;color:#2E2E2E;font-size: 12px; line-height: 0.7; align:right" 
+         onclick="dg.show();"/>
+         
+         <p:commandButton id="clearButton" type="button" value="Quitter"  
+        icon="ui-icon-pencil"  style="background-color: red;color:#2E2E2E;font-size: 12px; line-height: 0.7; align:right" 
+         onclick="d.hide();dg.hide();d2.hide();"/>
+          </h:panelGrid>
+          </p:dialog>
+         
+         <p:commandButton id="clearButton" type="button" value="Quitter"  
+        icon="ui-icon-pencil"  style="background-color: red;color:#2E2E2E;font-size: 12px; line-height: 0.7; align:right" 
+         onclick="d.hide();dg.hide();d2.hide();"/>
+      
+      
+            </h:panelGrid>
+            </p:dialog>
+         
+         
+         </td>
+         </tr>
+
+
+       </table>
+
+
+
+       </div>
+    
+    <br></br>
+    <br></br>     
+
+
+              </ui:define>
+
+             </ui:composition>
+
+            </h:body>
+</html>

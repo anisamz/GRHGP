@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:c="http://java.sun.com/jsf/core" 
+      	  xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+      
+
+
+      <h:body>
+
+
+      <ui:composition template="/Template/basicTemplate.xhtml">
+      <ui:define name="content">
+
+      <div align="center" style=";
+      color: #2E2E2E;
+      font-size: 30px;
+      line-height: 0.7;"> Notes</div>
+       <br></br>
+
+     <div>
+
+
+
+
+
+      <table align="center" width="100%" height= "80%" border="" bgcolor="" 
+      style="border-color:#FF8000; border-radius:50px" >
+
+
+         <tr>
+       
+        
+        <td>
+        
+  	   <h:form>
+  	   <p:growl id="messages"/> 
+  	
+  	   <p:panelMenu style="width:220px">
+        <p:submenu label="Notes" style=";
+      color: red; font-size: 15px; line-height: 0.7;" >
+            <p:menuitem id="effeDialogButton" value="Ajouter une nouvelle note"  onclick="d.show();" icon="ui-icon-circle-plus
+ " style="background-color: #FE9A2E;color:#2E2E2E"/>
+            <p:menuitem value="Consulter vos notes"   icon="ui-icon-disk" />
+         
+        </p:submenu>
+        </p:panelMenu>
+        
+         <p:dialog header="Notes" widgetVar="d" showEffect="" hideEffect="" height="450" width="450">
+          		<p:editor id="editor" escape = "false" value="#{forumBean.message}"  width="400" height="400"/> 
+          		<h:panelGrid columns="2" style="margin-top:10px">
+        	<p:commandButton id="submitButton" value="Enregistrer" onclick="d.hide();" action="#{forumBean.saveMessage}" update="messages" icon="ui-icon-disk" 
+        	 style="background-color: #FE9A2E;color:#2E2E2E;font-size: 15px; line-height: 0.7;"  />
+      
+      
+        <p:commandButton id="clearButton" type="button" value="Clear"  icon="ui-icon-close" 
+        style="background-color: #FE9A2E;color:#2E2E2E;font-size: 15px; line-height: 0.7;" />
+    </h:panelGrid>
+            </p:dialog>
+  	</h:form>
+  
+  
+  	</td>
+         
+     
+         
+         </tr>
+        
+
+       </table>
+    
+
+       </div>
+    
+       
+
+
+              </ui:define>
+
+             </ui:composition>
+
+            </h:body>
+</html>
